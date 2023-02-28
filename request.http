@@ -1,0 +1,91 @@
+###
+GET http://localhost:5000/api/habitaciones HTTP/1.1
+
+###
+POST http://localhost:5000/api/habitaciones HTTP/1.1
+Content-Type: application/json
+
+{
+    "habitacion_piso": 1,
+    "habitacion_num":20,
+    "cant_camas":3,
+    "tv": true,
+    "frigobar":true
+}
+
+###
+DELETE http://localhost:5000/api/habitaciones/2 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/habitaciones/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "habitacion_piso": 1,
+    "habitacion_num":2,
+    "cant_camas":1,
+    "tv": true,
+    "frigobar":false
+}
+
+###
+GET http://localhost:5000/api/personas HTTP/1.1
+
+###
+GET http://localhost:5000/api/personas/1 HTTP/1.1
+###
+POST http://localhost:5000/api/personas HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_completo": "Rene Torres",
+    "cedula":34567,
+    "correo":"rene@htmail.com",
+    "telefono": 2355657
+}
+
+###
+DELETE http://localhost:5000/api/personas/2 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/personas/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre_completo": "Ana B de Arco",
+    "cedula":2345,
+    "correo":"ana@htmail.com",
+    "telefono": 12349944
+}
+
+###
+GET http://localhost:5000/api/reservas HTTP/1.1
+
+###
+GET http://localhost:5000/api/reservas/1 HTTP/1.1
+###
+POST http://localhost:5000/api/reservas HTTP/1.1
+Content-Type: application/json
+
+{
+    "fechareserva": "2023/01/26",
+    "fechaentrada":"2023/02/23",
+    "fechasalida":"2023/02/26",
+    "idhabitacion": 1,
+    "idpersona": 1
+}
+
+###
+DELETE http://localhost:5000/api/reservas/2 HTTP/1.1
+
+###
+PUT http://localhost:5000/api/reservas/1 HTTP/1.1
+Content-Type: application/json
+
+{
+    "fechareserva": "2023/01/26",
+    "fechaentrada":"2023/02/21",
+    "fechasalida":"2023/02/30",
+    "idhabitacion": 1,
+    "idpersona": 3
+}
